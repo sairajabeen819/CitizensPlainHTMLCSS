@@ -1,0 +1,28 @@
+* {
+  margin:0;
+  padding:0;
+  max-height: 100000px;
+}
+ul, ol, dl, p, h1, h2, h3, h4, h5, h6, address, form, table, blockquote, applet, embed, object, iframe, frameset{margin:0 0 14px;}
+html, body, div, span, applet, embed, object, iframe, frameset,
+p, q, blockquote, sub, sup, a, abbr, acronym, font, img, small, center,
+h1, h2, h3, h4, h5, h6, b, strong, big, u, ins,
+i, cite, em, var, dfn, address, s, strike, del,
+dl, dt, dd, ol, ul, li, pre, code, kbd, samp, tt,
+fieldset, legend, form, label, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section, summary, time, mark, audio,video{
+  border:0;
+  background:none;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a, span, button {
+  font-family: $base-font-family;
+  line-height: 1.2;
+}
+body {
+  font-family: $base-font-family;
+  margin: 0;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:none;
+}

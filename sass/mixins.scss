@@ -1,0 +1,40 @@
+////Media Query///////
+
+
+@mixin sm-phone {
+
+  @media (min-width: $breakpoint-phone) {
+    @content;
+  }
+}
+
+@mixin md-phone {
+
+  @media (min-width: $breakpoint-md-phone) {
+    @content;
+  }
+}
+
+@mixin lg-phone {
+
+  @media (min-width: $breakpoint-lg-phone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+
+

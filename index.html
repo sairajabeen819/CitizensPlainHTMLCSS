@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Citizen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="javascript/script.js"></script>
+</head>
+<body>
+<header class="container-fluid">
+    <nav class="row header-area">
+        <div class="container header-content">
+            <h1 class="logo">
+                <img src="images/logo-citizens__horz-deepGreen.png" alt="Citizens Logo">
+            </h1>
+        </div>
+    </nav>
+
+</header>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <h2 class="main-heading">Trouble Logging In?</h2>
+                <form action="#">
+                    <fieldset class="radios-holder" role="radiogroup">
+                        <legend>Please select the reason you are unable to log in.</legend>
+                        <label aria-labelledby="forgetPass" class="radio-label">
+                            <span id="I forgot my password">I forgot my password</span>
+                            <input type="radio" name="radio" onclick="radioCheck(this)">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label aria-labelledby="lockedAccount" class="radio-label">
+                            <span id="lockedAccount">I am locked out of my account</span>
+                            <input type="radio" name="radio" onclick="radioCheck(this)">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label aria-labelledby="otp" class="radio-label">
+                            <span id="otp">I haven't received a One-Time Passcode (OTP)</span>
+                            <input type="radio" name="radio" onclick="radioCheck(this)">
+                            <span class="checkmark"></span>
+                        </label>
+                    </fieldset>
+                    <div class="btns-holder">
+                        <button id="continueBtn" class="btn btn-continue" disabled>Continue</button>
+                        <button class="btn btn-cancel">Cancel</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="column footer-content">
+                <h3>Need Assistance?</h3>
+                <p>If you are experiencing a problem not covered above, please contact Client Services at 877-550-5933
+                    or email us at <a href="mailto:clientservices@citizensbank.com">clientservices@citizensbank.com</a>
+                    Monday through Friday, 7 am - 7 pm ET.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

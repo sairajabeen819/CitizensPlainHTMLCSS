@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+@import "variables";
+@import "mixins";
+@import "base";
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px solid rgb(100, 149, 237);
+  outline-offset: 2px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.column {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  @include sm-phone {
+    max-width: 445px;
+  }
+  @include md-phone {
+    max-width: 540px;
+  }
+  @include lg-phone {
+    max-width: 720px;
+  }
+  @include tablet {
+    max-width: 960px;
+  }
+  @include desktop {
+    max-width: 1184px;
+  }
+}
+
+.header-area {
+  min-height: 90px;
+  background-color: $bg-grey;
+  -webkit-box-shadow: 0px 9px 10px 0px rgba(224, 224, 224, 1);
+  -moz-box-shadow: 0px 9px 10px 0px rgba(224, 224, 224, 1);
+  box-shadow: 0px 9px 10px 0px rgba(224, 224, 224, 1);
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    .logo{
+      max-width: 170px;
+      margin-bottom: 0;
+      img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+main {
+  padding: 70px 0;
+
+  .main-heading {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0 0 15px;
+    font-weight: 700;
+  }
+
+
+  .radios-holder {
+    margin-bottom: 15px;
+
+    legend {
+      font-size: 18px;
+      line-height: 1.2;
+      margin: 0 0 15px;
+      font-weight: 400;
+    }
+
+    .radio-label {
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 22px;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      color: $dark-grey;
+
+      &:focus-visible {
+        outline: 2px solid rgb(100, 149, 237);
+        outline-offset: 2px;
+      }
+
+
+      input {
+        position: absolute;
+        left: 2px;
+        appearance: none;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+
+        &:focus {
+          outline: 2px solid rgb(100, 149, 237);
+          outline-offset: 2px;
+        }
+        &:checked ~ .checkmark {
+          border-color: $green-border;
+          &:hover {
+            background: transparent;
+          }
+        }
+
+        &:checked ~ .checkmark:after {
+          display: block;
+        }
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 23px;
+        width: 23px;
+        border: 2px solid $chkmark-grey;
+        border-radius: 50%;
+
+        &:after {
+          content: "";
+          position: absolute;
+          display: none;
+          top: 2px;
+          left: 2px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background: $green-border;
+        }
+      }
+
+      &:hover input ~ .checkmark {
+        background-color: $light-grey;
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  .btns-holder {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .btn {
+      padding: 10px 14px;
+      text-align: center;
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      display: inline-block;
+      margin-bottom: 0;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 0;
+      border: 1px solid $medium-grey;
+      background-color: $white-color;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: $grey-hover;
+      }
+
+      &.btn-continue {
+        background-color: $red-btn-color;
+        border-color: transparent;
+        margin-right: 20px;
+        color: $white-color;
+
+        &:disabled {
+          background: $grey-disable;
+          pointer-events: none;
+          cursor: default;
+        }
+
+        &:hover {
+          background-color: darken($red-btn-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+  background-color: #fff;
+}
+.footer-content {
+  h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #6d6d6d;
+    font-weight: 400;
+  }
+}
+
+
